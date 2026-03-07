@@ -177,6 +177,30 @@ http://localhost:5173
 4. Save the interaction.
 5. View stored records via API.
 
+## Screenshots
+
+### Backend API (FastAPI Swagger)
+
+This shows all available CRM and AI endpoints used by the system.
+
+![FastAPI Docs](screenshots/FAST-API-docs.png)
+
+
+
+### Log Interaction UI (Before AI Interaction)
+
+React interface where field representatives can manually log HCP interactions.
+
+![UI Before Interaction](screenshots/UI-Before-Interaction.png)
+
+
+
+### AI-Powered Interaction Extraction
+
+Users can describe interactions in natural language and the AI agent automatically fills the CRM form.
+
+![AI Extraction](screenshots/UI-After-AI-Extraction.png)
+
 
 
 # Assignment Context
