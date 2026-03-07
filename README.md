@@ -203,6 +203,10 @@ Users can describe interactions in natural language and the AI agent automatical
 
 
 
+## Demo Video
+
+[Click here to watch the AI CRM HCP Module demo](https://drive.google.com/file/d/1poCesIJBqt0VBsw36M3r9oTen_whisZ3/view)
+
 # Assignment Context
 
 This project was developed as part of an **AI-first CRM HCP Module assignment**, demonstrating how AI agents can support pharmaceutical sales workflows.
