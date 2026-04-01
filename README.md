@@ -1,88 +1,78 @@
-# AI CRM HCP Module
+# AI CRM for Healthcare Professionals
 
-An AI-powered Customer Relationship Management (CRM) module for logging interactions with Healthcare Professionals (HCPs).  
-This system allows pharmaceutical field representatives to log interactions through a structured form or via a conversational AI assistant.
+> AI-powered CRM for healthcare field reps — describe a doctor visit in plain English, the agent handles the rest.
 
+Field representatives log interactions with doctors using natural language. A LangGraph agent automatically extracts structured CRM data, detects sentiment, and suggests follow-up actions.
 
-
-# Project Overview
-
-The application demonstrates an **AI-first CRM system** where interactions with doctors can be logged using natural language.
-
-Example:
-
-"Met Dr Sharma today. Discussed Product X effectiveness. Shared brochure and samples. Doctor seemed interested."
+**Example:**
+> "Met Dr Sharma today. Discussed Product X effectiveness. Shared brochure and samples. Doctor seemed interested."
 
 The AI extracts structured CRM data automatically and fills the interaction form.
 
+---
 
+# 🏗️ Architecture
 
-# Architecture
+```
+React Frontend
+↓
+FastAPI Backend
+↓
+LangGraph AI Agent
+↓
+Groq LLM (Llama-3.3-70B)
+↓
+PostgreSQL Database
+```
 
-React Frontend  
-↓  
-FastAPI Backend  
-↓  
-LangGraph AI Agent  
-↓  
-Groq LLM (Llama-3.3-70B)  
-↓  
-SQLite Database
+---
 
+# ⚙️ Tech Stack
 
-
-# Tech Stack
-
-Frontend
+**Frontend**
 - React (Vite)
 - Redux (state management)
 
-Backend
+**Backend**
 - FastAPI
 - SQLAlchemy
 
-AI
+**AI**
 - LangGraph
 - Groq LLM (llama-3.3-70b-versatile)
 
-Database
-- SQLite (Prototype database)
+**Database**
+- PostgreSQL (Neon DB)
 
+---
 
+# 🤖 AI Agent Tools
 
-# AI Agent Tools
+The LangGraph agent includes 5 tools:
 
-The LangGraph agent includes the following tools:
+| Tool | Description |
+|------|-------------|
+| **Log Interaction** | Extracts structured CRM data from natural language input |
+| **Edit Interaction** | Updates interaction details using natural language |
+| **Analyze Sentiment** | Detects doctor engagement and sentiment |
+| **Summarize Interaction** | Generates a short meeting summary |
+| **Suggest Follow-up** | Recommends next actions for the field rep |
 
-### 1. Log Interaction
-Extracts structured CRM data from conversation input.
+---
 
-### 2. Edit Interaction
-Allows updates to interaction details using natural language.
+# ✨ Features
 
-### 3. Analyze Sentiment
-Detects doctor engagement and sentiment.
-
-### 4. Summarize Interaction
-Generates a short meeting summary.
-
-### 5. Suggest Follow-up
-Recommends next actions for the sales representative.
-
-
-
-# Features
-
-- AI-assisted interaction logging
-- Structured CRM form
+- AI-assisted interaction logging via natural language
+- Structured CRM form with auto-fill
 - Sentiment detection
-- AI-generated summaries
+- AI-generated meeting summaries
 - Follow-up suggestions
 - Interaction history storage
+- Swagger-documented REST API
 
+---
 
-
-# Project Structure
+# 📁 Project Structure
 
 ```
 AI-CRM-HCP
@@ -103,111 +93,69 @@ AI-CRM-HCP
 └── README.md
 ```
 
+---
 
-
-# Running the Project
+# 🚀 Running the Project
 
 ## Backend
 
-Navigate to backend folder
-
-```
+```bash
+# Navigate to backend folder
 cd back-end
-```
 
-Activate virtual environment
-
-```
+# Activate virtual environment
 venv\Scripts\activate
-```
 
-Start server
-
-```
+# Start server
 uvicorn main:app --reload
 ```
 
-Backend runs at:
-
-```
-http://127.0.0.1:8000
-```
-
-Swagger API docs:
-
-```
-http://127.0.0.1:8000/docs
-```
-
----
+Backend runs at: `http://127.0.0.1:8000`  
+Swagger API docs: `http://127.0.0.1:8000/docs`
 
 ## Frontend
 
-Navigate to frontend
-
-```
+```bash
+# Navigate to frontend
 cd front-end/crm-frontend
-```
 
-Install dependencies
-
-```
+# Install dependencies
 npm install
-```
 
-Start development server
-
-```
+# Start development server
 npm run dev
 ```
 
-Frontend runs at:
+Frontend runs at: `http://localhost:5173`
 
-```
-http://localhost:5173
-```
+---
 
+# 🎬 Demo
 
-
-# Demo Workflow
-
-1. Open the frontend application.
-2. Log an interaction via AI chat.
-3. The AI extracts structured data and fills the form.
-4. Save the interaction.
-5. View stored records via API.
+## 📹 Demo Video
+[Click here to watch the AI CRM HCP Module demo](https://drive.google.com/file/d/1poCeslJBqt0VBsw36M3r9oTen_whisZ3/view?usp=sharing)
 
 ## Screenshots
 
 ### Backend API (FastAPI Swagger)
-
-This shows all available CRM and AI endpoints used by the system.
+All available CRM and AI endpoints used by the system.
 
 ![FastAPI Docs](screenshots/FAST-API-docs.png)
 
-
-
-### Log Interaction UI (Before AI Interaction)
-
-React interface where field representatives can manually log HCP interactions.
+### Log Interaction UI
+React interface where field representatives log HCP interactions.
 
 ![UI Before Interaction](screenshots/UI-Before-Interaction.png)
 
-
-
 ### AI-Powered Interaction Extraction
-
-Users can describe interactions in natural language and the AI agent automatically fills the CRM form.
+Natural language input automatically fills the CRM form via the AI agent.
 
 ![AI Extraction](screenshots/UI-After-AI-Extraction.png)
 
+---
 
+# 👩‍💻 Author
 
-## Demo Video
-
-[Click here to watch the AI CRM HCP Module demo](https://drive.google.com/file/d/1poCeslJBqt0VBsw36M3r9oTen_whisZ3/view?usp=sharing)
-
-# Assignment Context
-
-This project was developed as part of an **AI-first CRM HCP Module assignment**, demonstrating how AI agents can support pharmaceutical sales workflows.
-
+**Ketki Vijay Mohite**  
+📧 [ketkimohite214@gmail.com](mailto:ketkimohite214@gmail.com)  
+🎓 MCA Student | Backend Developer & AI Engineer
